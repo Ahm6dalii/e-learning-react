@@ -9,9 +9,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setUser } from '../../redux/reducers/userAuthSlice';
 import AlertError from '../../components/alertError/AlertError';
-
+import UploadDialog from '../../components/uploadImgDialog/UploadDialog';
+import RemoveImgDialog from '../../components/removeImgDialog/removeImgDialog';
 import UploadModal from '../components/modal/UploadModal';
-import RemoveImgDialog from '../../components/removeImgDialog/RemoveImgDialog';
 const Settings = () => {
   const { translation } = useSelector((state) => state.lang);
   let [userExist, setUserExist] = useState(false);
