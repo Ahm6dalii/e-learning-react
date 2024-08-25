@@ -15,7 +15,7 @@ import AccountSetting from './pages/setting/accountSetting/AccountSetting'
 import CoursesCart from "./pages/cart/CoursesCart";
 import CoursesList from "./pages/coursesList/CoursesList";
 import Wishlist from "./pages/wishlist/Wishlist";
-import Login from './pages/login/login'
+
 import Contact from './pages/cotact/Contact'
 import MyCourses from './pages/setting/myCourses/MyCourses'
 
