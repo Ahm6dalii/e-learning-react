@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import UploadDialog from "../../../components/uploadImgDialog/UploadDialog";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import toast from "react-hot-toast";
-import { setUser } from "../../../redux/reducers/userAuthSlice";
-import AlertError from "../../../components/alertError/AlertError";
-import RemoveImgDialog from "../../../components/removeImgDialog/removeImgDialog";
+
 export default function AccountSetting() {
   const { user } = useSelector((state) => state.auth);
-  const dispatch = useDispatch()
+
   const { translation } = useSelector((state) => state.lang);
   let [loading, setLoading] = useState(false);
   const apiLink = useSelector((state) => state.apiLink.link);
