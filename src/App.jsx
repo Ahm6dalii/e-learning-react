@@ -27,34 +27,34 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-   <BrowserRouter>
-   <Routes>
-    <Route path='' element={<Layout ></Layout>}>
-    <Route path='' element={<Home></Home>}></Route>
-    <Route path='/about' element={ <About></About>}></Route>
-    <Route path='/course/:id' element={ <CoursesDetails></CoursesDetails>}></Route>
-    <Route path='/contact' element={ <Contact></Contact>}></Route>
-    <Route path='/setting' element={<ProtectedRoot><Setting></Setting></ProtectedRoot>}>
-        <Route path='/setting' element={ <ProtectedRoot> <ProfileSetting></ProfileSetting></ProtectedRoot>}></Route>
-        <Route path='/setting/account' element={<ProtectedRoot><AccountSetting></AccountSetting></ProtectedRoot> }></Route>
-        <Route path='/setting/mycourses' element={<ProtectedRoot><MyCourses></MyCourses></ProtectedRoot> }></Route>
-    </Route>
+        <BrowserRouter>
+          <Routes>
+            <Route path='' element={<Layout ></Layout>}>
+              <Route path='' element={<Home></Home>}></Route>
+              <Route path='/about' element={<About></About>}></Route>
+              <Route path='/course/:id' element={<CoursesDetails></CoursesDetails>}></Route>
+              <Route path='/contact' element={<Contact></Contact>}></Route>
+              <Route path='/setting' element={<ProtectedRoot><Setting></Setting></ProtectedRoot>}>
+                <Route path='/setting' element={<ProtectedRoot> <ProfileSetting></ProfileSetting></ProtectedRoot>}></Route>
+                <Route path='/setting/account' element={<ProtectedRoot><AccountSetting></AccountSetting></ProtectedRoot>}></Route>
+                <Route path='/setting/mycourses' element={<ProtectedRoot><MyCourses></MyCourses></ProtectedRoot>}></Route>
+              </Route>
               <Route path="/cart" element={<ProtectedRoot><CoursesCart /></ProtectedRoot>}></Route>
               <Route path="/courses" element={<CoursesList />}></Route>
-              <Route path="/wishlist" element={<ProtectedRoot><Wishlist /></ProtectedRoot> }></Route>
-      <Route path='/admin/*' element={<ProtectedRoot><Admin /></ProtectedRoot> }></Route>
+              <Route path="/wishlist" element={<ProtectedRoot><Wishlist /></ProtectedRoot>}></Route>
+              <Route path='/admin/*' element={<ProtectedRoot><Admin /></ProtectedRoot>}></Route>
 
-    <Route path='/register' element={<Register></Register>}></Route>
-    <Route path='/login' element={<Login></Login>}></Route>
-    <Route path='*' element={<NotFound></NotFound>}></Route>
+              <Route path='/register' element={<Register></Register>}></Route>
+              <Route path='/login' element={<Login></Login>}></Route>
+              <Route path='*' element={<NotFound></NotFound>}></Route>
 
-    </Route>
-   </Routes>
-   </BrowserRouter>
+            </Route>
+          </Routes>
+        </BrowserRouter>
 
-    </QueryClientProvider>
-   
-     
+      </QueryClientProvider>
+
+
 
     </>
   );
